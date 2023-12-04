@@ -1,1 +1,1 @@
-# travel-blog
+# The project is in the process of development
