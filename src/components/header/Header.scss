@@ -1,0 +1,99 @@
+$white-color: white;
+$black-color: black;
+$active-link-color: rgb(218, 213, 213);
+
+header {
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 90px;
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+
+    .logo-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.3rem;
+      text-decoration: none;
+
+      .logo {
+        font-weight: 600;
+        letter-spacing: 0.25rem;
+        color: $white-color;
+      }
+
+      @media (min-width: 0px) {
+        .logo {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (min-width: 400px) {
+        .logo {
+          font-size: calc(0.9rem + 1vw);
+        }
+      }
+
+      @media (min-width: 1001px) {
+        .logo {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    nav {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 2rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+
+        .link,
+        .sign-up {
+          color: $white-color;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+        }
+
+        .link:hover {
+          border-bottom: 4px solid $white-color;
+          transition: all 0.2s ease-out;
+        }
+
+        .sign-up {
+          white-space: nowrap;
+          border-top: 2px solid $white-color;
+          border-bottom: 2px solid $white-color;
+          border-right: 1px solid $white-color;
+          border-left: 1px solid $white-color;
+        }
+
+        .sign-up:hover {
+          background-color: $white-color;
+          color: $black-color;
+          transition: all 0.2s ease-out;
+        }
+      }
+    }
+  }
+}
